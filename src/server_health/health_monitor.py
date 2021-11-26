@@ -2,7 +2,6 @@ from time import sleep
 import requests
 from server_health.logger import setup_logging
 from server_health.constants import server, active, inactive
-import logging
 import argparse
 
 logger, mag_loc = setup_logging()
