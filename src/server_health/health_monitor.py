@@ -7,18 +7,18 @@ import argparse
 logger, mag_loc = setup_logging()
 
 main_parser = argparse.ArgumentParser(
-    description="Basic requirements for any type of run")
+    description="Welcome to Magnificent Server Health checker! You can run as default, or use the options below: ")
 
 main_parser.add_argument('-t', '--time_interval', type=int,
-                         help="Amount of time before report generation", default = 60)
+                         help="Amount of time (in seconds) before report generation", default = 60)
 
 main_parser.add_argument('-p', '--ping_interval', type=int,
-                         help="Amount of time before pinging the server")
-
-
+                         help="Amount of time (in seconds) before pinging the server")
 
 args = main_parser.parse_args()
+# Can be used to display arguments parsed 
 user_selection = vars(args)
+
 
 class MagServer:
     # Currently, our server is quite simple as we are just calling a host/URL
@@ -102,7 +102,6 @@ class MagServer:
         logger.info("")
             
 
-
 def main():
     # This is being installed as a package (for OS independence)
     # We log the location of the log file at the beginging to the console log
@@ -138,6 +137,7 @@ def main():
         # Update health status after each minute
         server_health, server_report = magServer.status_update(minute_status_checker)
         magServer.generate_report(server_report)
+
         logger.info(f"Server Health Status Update: Magnificent is {server_health}")
 
 
