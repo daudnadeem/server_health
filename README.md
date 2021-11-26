@@ -18,9 +18,9 @@ pip uninstall server_health
 # This will generate a report every 60 seconds, and ping the server every 10 seconds
 mag_hlth
 # This will generate a report every 120 seconds, and ping the server every 12 seconds
-maghlth -t 120
+mag_hlth -t 120
 # This will generate a report every 100 seconds, and ping the server every 2 seconds
-maghlth -t 100 -p 2
+mag_hlth -t 100 -p 2
 # You may also use argparse when calling this as a script
 python3 src/server_health/health_monitor.py -t 100 -p 2
 ```
