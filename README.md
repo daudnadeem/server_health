@@ -38,8 +38,10 @@ Logging is generated from the `logger` class and feeds off of `logging.yaml` - w
 
 ## Notes
 
-`constants.py` contains hardcoded values - Possible to extract these to environment variables, but there is no need since nothing is 'secret'
-`setup.py` used to package this into a python module - Implemented for ease of use
-`health_monior.py` 
-    1. contains main()
-    2. contains MagServer class
+- `constants.py` contains hardcoded values - Possible to extract these to environment variables, but there is no need since nothing is 'secret'
+
+- `setup.py` used to package this into a python module - Implemented for ease of use
+
+- `health_monior.py` - This is the main script
+    - contains main()
+    - contains MagServer class
