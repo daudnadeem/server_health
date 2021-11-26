@@ -28,6 +28,7 @@ python3 src/server_health/health_monitor.py -t 100 -p 2
 You may run this service as default (shown above) which will ping the server every 10 seconds and generate a report after 1 minute OR you may wish to parse arguments to the service to generate a report based on your needs.
 
 `-t` - (s) time between report generation
+
 `-p` - (s) time between each ping to the server 
 
 ## Logging
