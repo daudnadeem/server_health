@@ -21,7 +21,9 @@ mag_hlth
 mag_hlth -t 120
 # This will generate a report every 100 seconds, and ping the server every 2 seconds
 mag_hlth -t 100 -p 2
-# You may also use argparse when calling this as a script
+# You may also use directly use the script, and parse arguments to the script
+# But make sure you have set your PYTHONPATH
+export PYTHONPATH=/path/to/src/server_health/
 python3 src/server_health/health_monitor.py -t 100 -p 2
 ```
 
